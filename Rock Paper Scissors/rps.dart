@@ -4,7 +4,8 @@ import 'dart:math';
 
 void main() {
   var move = [ 'rock', 'paper', 'scissors' ];
-  while (true) {
+  bool condition = true;
+  while (condition == true) {
     print('== Welcome to Rock, Paper, Scissors ==');
     stdout.write('Press: r,p,s for Quit: q -----> ');
     var userInput = stdin.readLineSync();
@@ -18,7 +19,7 @@ void main() {
     } else if (userInput == 's') {
       playerMove = move[2];
     } else if (userInput == 'q') {
-      break;
+      condition = false;
     } else {
       print('Invalid input');
     }
